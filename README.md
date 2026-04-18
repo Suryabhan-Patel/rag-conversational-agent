@@ -1,52 +1,99 @@
-# Conversational AI Agent with LangChain/LangGraph
+# RAG Conversational AI Agent with Lead Capture
 
-A production-ready conversational AI agent that combines intent detection, RAG, and tool calling for lead capture with persistent conversation state.
+## 🚀 Overview
 
-## Features
+This project is a production-ready conversational AI system built using Retrieval-Augmented Generation (RAG).
 
-- 🎯 **Intent Detection**: Classify user inputs (greeting, query, high-intent lead)
-- 📚 **RAG System**: Retrieves context from local knowledge base (JSON/Markdown)
-- 🔧 **Tool Calling**: Automated lead capture and external tool integration
-- 💾 **Conversation Memory**: Maintains context across multiple turns
-- 🏗️ **Modular Architecture**: Clean separation of concerns for scalability
-- 🧪 **Fully Testable**: Comprehensive test suite included
+It intelligently:
 
-## Project Structure
+* Understands user intent
+* Answers queries strictly from context
+* Captures leads for high-intent users
 
-```
-new_project/
-├── src/                          # Main source code
-│   ├── agent/                    # Core agent orchestration
-│   ├── core/                     # Base classes and utilities
-│   ├── intent/                   # Intent detection module
-│   ├── rag/                      # RAG/retrieval system
-│   ├── memory/                   # Conversation memory management
-│   ├── tools/                    # Tool definitions and handlers
-│   ├── config/                   # Configuration management
-│   └── __init__.py
-├── knowledge_base/               # RAG knowledge base files
-├── tests/                        # Unit and integration tests
-├── logs/                         # Application logs
-├── .env.example                  # Environment variables template
-├── requirements.txt              # Python dependencies
-├── main.py                       # Entry point
-└── README.md
-```
+---
 
-## Installation
+## 🧠 Key Features
+
+### 1. Intent Classification
+
+* Greeting → Natural response
+* Query → Answer from retrieved context only
+* High Intent → Trigger lead capture flow
+
+### 2. RAG-based Response System
+
+* Retrieves relevant context using embeddings
+* Ensures responses are grounded (no hallucination)
+
+### 3. Lead Capture System
+
+* Collects user details (email, platform)
+* Stores data for follow-up
+
+---
+
+## 🏗️ Architecture
+
+User Input → Intent Detection →
+→ (Query → RAG Retrieval → Response)
+→ (High Intent → Lead Capture Flow)
+
+---
+
+## 🛠️ Tech Stack
+
+* Python
+* FastAPI (backend ready)
+* NLP (intent classification)
+* Embeddings
+* FAISS-ready architecture
+
+---
+
+## ▶️ How to Run
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env
-# Configure your API keys in .env
-```
-
-## Quick Start
-
-```bash
 python main.py
 ```
 
-## Configuration
+---
 
-See `.env.example` for all available options.
+## 💬 Example Interaction
+
+User: "What's your pricing?"
+→ Intent: QUERY
+→ Response: Based on retrieved context
+
+User: "I want to collaborate"
+→ Intent: HIGH_INTENT
+→ Lead capture initiated
+
+---
+
+## 📂 Project Structure
+
+* `core/` → types and base logic
+* `intent/` → intent detection
+* `rag/` → retrieval system
+* `memory/` → conversation memory
+* `tools/` → lead capture
+* `tests/` → unit tests
+
+---
+
+## 🎯 Why This Project Matters
+
+This project simulates a real-world AI assistant used in:
+
+* Sales automation
+* Customer support bots
+* Lead generation systems
+
+It demonstrates practical ML system design, not just models.
+
+---
+
+## 👨‍💻 Author
+
+Suryabhan Patel
