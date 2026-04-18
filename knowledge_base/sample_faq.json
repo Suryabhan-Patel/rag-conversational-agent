@@ -1,0 +1,26 @@
+[
+  {
+    "id": "faq_1",
+    "question": "What services do you offer?",
+    "answer": "We offer consulting, software development, and AI integration services tailored to your business needs.",
+    "category": "general"
+  },
+  {
+    "id": "faq_2",
+    "question": "What is your pricing model?",
+    "answer": "We offer flexible pricing based on project scope. Contact our sales team for a custom quote.",
+    "category": "pricing"
+  },
+  {
+    "id": "faq_3",
+    "question": "Do you provide support?",
+    "answer": "Yes, we provide 24/7 customer support via email, chat, and phone.",
+    "category": "support"
+  },
+  {
+    "id": "faq_4",
+    "question": "Can you integrate with our existing systems?",
+    "answer": "Absolutely. We specialize in seamless integration with legacy and modern systems.",
+    "category": "technical"
+  }
+]
